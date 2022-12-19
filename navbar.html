@@ -1,0 +1,71 @@
+<header>
+    <p class="headBanner">Shopping made easy. Buy now, pay later with Sezzle <a href="#">See details</a></p>
+   <div>
+    <div class="searchSection">
+        <div>
+            <a href="index.html"><img src="https://img.shop.com/Image/resources/logos/shop-logo-us-gold.svg" alt=""></a>
+            <a href="index.html"><img class="mobileLogo"
+                    src="https://img.shop.com/Image/resources/logos/shop-s-logo-icon.svg" alt=""></a>
+            <div class="searchBar">
+                <select>
+                    <option>All Department</option>
+                    <option>Auto</option>
+                    <option>Baby</option>
+                    <option>Books</option>
+                    <option>Business</option>
+                    <option>Camera</option>
+                    <option>Clothes</option>
+                </select>
+                <input type="text" placeholder="Search Shop.com">
+                <img src="https://www.citypng.com/public/uploads/small/116400840186bmo0mkghcdq8hn99wmpbh9wrgbytghidisi7e41vegbclccrb6kg9hrk0ebgqrpc5ezz2tjtkvsfsvk7yfbakowxbpvrzsakde3.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="accountSection">
+            <div>
+                <div><img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="">
+                    <p id="myUser"></p>
+                </div>
+                <div><img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="">
+                    <p id="logout"></p>
+                </div>
+                <div><img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="">
+                    <p><a href="cart.html">Cart</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menuSection">
+        <div class="cate">
+            <img src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="">
+            <p>Categories</p>
+        </div>
+        <div class="menu">
+            <a href="shop.html">Exclusive Brands</a>
+            <a href="shop.html">Srores</a>
+            <a href="shop.html">Deals</a>
+            <a href="shop.html">Departments</a>
+            <a href="shop.html">ShopBuddy</a>
+            <a href="shop.html">Shop Local</a>
+            <a href="orders.html">Orders</a>
+        </div>
+    </div>
+   </div>
+</header>
+
+<script>
+    let myUser = localStorage.getItem('isLogged')
+    if (myUser == null) {
+        document.querySelector("#myUser").innerHTML = '<a href="login.html">Sign In</a>'
+        document.querySelector("#logout").innerHTML = '<a href="signup.html">Sign Up</a>'
+    } else {
+        document.querySelector("#myUser").innerHTML = '<a href="#">'+myUser+'</a>'
+        document.querySelector("#logout").innerHTML = '<a>logout</a>'
+        document.querySelector("#logout").style.cursor = 'pointer'
+        document.querySelector("#logout").addEventListener('click',()=>{
+            localStorage.removeItem('isLogged');
+            window.location = 'index.html'
+        })
+    }
+
+</script>
