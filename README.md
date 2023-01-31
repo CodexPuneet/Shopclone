@@ -56,13 +56,13 @@ Technologies used in the project:
 ## 🚀 Demo
 
 **Front-end deployed URL:**
-https://joyful-choux-821d5c.netlify.app/
+https://sensational-sherbet-0673a4.netlify.app/
 
 # Installation
 
 Clone the project
 ```bash
-https://github.com/CodexPuneet/Hotstar-lite.git
+https://github.com/CodexPuneet/Shopclone.git
 run index file // run it locally
 ```
 ## ✍Developer
